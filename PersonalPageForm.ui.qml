@@ -20,15 +20,12 @@ Page {
     visible: true
     header: ToolBar {
         id: toolBar
-        height: 50
-        anchors.right: parent.right
-        anchors.rightMargin: 0
-        anchors.left: parent.left
-        anchors.leftMargin: 0
+        Layout.preferredHeight: parent.height
 
         RowLayout {
             Layout.fillWidth: true
             id: rowLayout3
+            anchors.bottomMargin: 0
             anchors.fill: parent
             Image {
 
@@ -105,28 +102,22 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.fillWidth: true
 
-            RoundButton {
-                id: roundButton
-                Layout.alignment: Qt.ФФ | Qt.AlignVCenter
-
-                width: 215
-                height: 52
-                text: "Конец проката"
-                font.pointSize: 11
-            }
-
-            Item {
-                id: element2
-                Layout.fillWidth: true
-            }
-
             Image {
                 id: image1
-                Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 fillMode: Image.PreserveAspectFit
                 source: "time.png"
             }
 
+            RoundButton {
+                id: roundButton
+
+                width: 245
+                height: 52
+                text: "Конец проката"
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                font.pointSize: 11
+            }
         }
 
         RowLayout {
@@ -136,19 +127,6 @@ Page {
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
-            RoundButton {
-                id: roundButton1
-                width: 215
-                height: 49
-                text: " Искать прокат"
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                font.pointSize: 11
-            }
-
-            Item {
-                id: element3
-                Layout.fillWidth: true
-            }
             Image {
 
                 id: image2
@@ -157,6 +135,15 @@ Page {
                 Layout.alignment: Qt.AlignRight
                 // fillMode: Image.PreserveAspectFit
                 source: "search.png"
+            }
+
+            RoundButton {
+                id: roundButton1
+                width: 245
+                height: 49
+                text: " Искать прокат"
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                font.pointSize: 11
             }
         }
         Item {

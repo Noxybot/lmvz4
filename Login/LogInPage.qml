@@ -40,7 +40,7 @@ Page {
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
-            font.pointSize: 14
+            font.pointSize: 34
             font.family: "fontawesome"
             leftPadding: 30
             background: Rectangle {
@@ -51,7 +51,7 @@ Page {
 
                 Text {
                     text: "\uf007"
-                    font.pointSize: 14
+                    font.pointSize: 34
                     font.family: "fontawesome"
                     color: mainAppColor
                     anchors.left: parent.left
@@ -75,7 +75,7 @@ Page {
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
-            font.pointSize: 14
+            font.pointSize: 34
             font.family: "fontawesome"
             leftPadding: 30
             echoMode: TextField.PasswordEchoOnEdit
@@ -86,7 +86,7 @@ Page {
                 color: "transparent"
                 Text {
                     text: "\uf023"
-                    font.pointSize: 14
+                    font.pointSize: 34
                     font.family: "fontawesome"
                     color: mainAppColor
                     anchors.left: parent.left
@@ -135,7 +135,7 @@ Page {
             text: '<html><style type="text/css"></style><a href="http://google.com">Забыли пароль?</a></html>' //qsTr("Forgot password?")
             linkColor: mainTextCOlor
             Layout.alignment: Qt.AlignHCenter
-            font.pointSize: 14
+            font.pointSize: 34
             color: mainTextCOlor
             Layout.margins: 10
             onLinkActivated: forgotPassword()
