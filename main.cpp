@@ -53,6 +53,7 @@
 ////#include <QtQuickControls2>
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QFont>
 int main(int argc, char **argv)
 {
 //    QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
@@ -64,6 +65,11 @@ int main(int argc, char **argv)
 //    view.setHeight(640);
 //    view.show();
     QGuiApplication app(argc, argv);
+    QFont f = app.font();
+    f.setFamily("Monaco");
+    f.setPointSize(30);
+    app.setFont(f);
+   QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));

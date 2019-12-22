@@ -14,10 +14,10 @@ ApplicationWindow {
     //RegistrationForm {}
     //Places_map {}
     StackView {
+        anchors.fill: parent
            id: stack
           //initialItem: Qt.resolvedUrl("MapView.qml")
         initialItem: Qt.resolvedUrl("Login/LoginNewForm.qml")
-           anchors.fill: parent
        }
 //
    // stack.push(CabinetForm);
