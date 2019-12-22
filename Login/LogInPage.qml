@@ -40,7 +40,7 @@ Page {
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
-           // font.pointSize: 34
+            font.pointSize: 34
             font.family: "fontawesome"
             leftPadding: 30
             background: Rectangle {

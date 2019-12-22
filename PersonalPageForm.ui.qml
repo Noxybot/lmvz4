@@ -22,19 +22,26 @@ Page {
     ColumnLayout {
         id: columnLayout
         anchors.fill: parent
+
+
         ToolBar {
             id: toolBar
             Layout.fillWidth: true
-            Layout.preferredHeight: parent.height / 5
-
+            Layout.preferredHeight: parent.height / 9.9
             RowLayout {
                 Layout.fillWidth: true
                 id: rowLayout3
                 anchors.bottomMargin: 0
                 anchors.fill: parent
-                Image {
+
+                Item {
                     Layout.maximumHeight: parent.height
                     Layout.maximumWidth: parent.width / 4
+                    Layout.preferredHeight: parent.height
+                    Layout.preferredWidth: parent.width / 5
+
+                Image {
+                    anchors.fill: parent
 
                     id: image3
                     anchors.left: parent.left
@@ -53,9 +60,16 @@ Page {
                         anchors.fill: parent
                     }
                 }
-                Image {
+                }
+                Item {
+                    Layout.alignment: Qt.AlignRight
                     Layout.maximumHeight: parent.height
                     Layout.maximumWidth: parent.width / 4
+                    Layout.preferredHeight: parent.height
+                    Layout.preferredWidth: parent.width / 5
+
+                Image {
+                   anchors.fill: parent
                     MouseArea {
                         id: person
                         anchors.fill: parent
@@ -68,96 +82,102 @@ Page {
                     fillMode: Image.PreserveAspectFit
                     source: "person.png"
                 }
+                }
             }
+        }
+        Item {
+            id: element111
+            height: 200
         }
 
         RowLayout {
             id: rowLayout2
-            width: 100
-            height: 100
-            Layout.fillHeight: false
+            Layout.preferredHeight: parent.height / 8
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.fillWidth: true
 
             Label {
+                Layout.fillHeight: true
                 id: element
-                Layout.preferredHeight: parent.height
+                // Layout.preferredHeight: parent.height
                 text: qsTr("Здравствуйте, ")
-             //   font.pointSize: 34
+                font.pixelSize: 74
             }
 
             Label {
-                Layout.preferredHeight: parent.height
+                Layout.fillHeight: true
+                // Layout.preferredHeight: parent.height
                 id: username
                 text: qsTr("username")
-               // font.pointSize: 64
+                font.pixelSize: 74
             }
         }
 
         Item {
             id: element4
-            width: 200
             height: 100
-            Layout.fillWidth: true
-            Layout.fillHeight: true
         }
 
         RowLayout {
             id: rowLayout
-            //            width: 100
-            //            height: 100
+            Layout.fillHeight: true
             Layout.preferredHeight: parent.height / 9
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.fillWidth: true
-
-            Image {
-                id: image1
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                fillMode: Image.PreserveAspectFit
+            Item {
                 Layout.maximumHeight: parent.height
                 Layout.maximumWidth: parent.width / 4
-                source: "time.png"
+                Layout.preferredHeight: parent.height
+                Layout.preferredWidth: parent.width / 5
+
+                Image {
+                    anchors.fill: parent
+                    id: image1
+                    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                    fillMode: Image.PreserveAspectFit
+                    source: "time.png"
+                }
             }
-
             RoundButton {
+                Layout.maximumHeight: parent.height / 1.5
+                Layout.fillHeight: true
                 id: roundButton
-
-                Layout.preferredHeight: parent.height - 5
+                font.pixelSize: 64
                 text: "Конец проката"
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                //font.pointSize: 11
-                //font.pointSize: 34
+
             }
         }
 
         RowLayout {
+
             id: rowLayout1
+            Layout.fillHeight: true
             //width: 100
             //height: 100
             Layout.preferredHeight: parent.height / 9
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-
-            Image {
-
-                id: image2
+            Item {
                 Layout.maximumHeight: parent.height
                 Layout.maximumWidth: parent.width / 4
-                Layout.alignment: Qt.AlignRight
-                fillMode: Image.PreserveAspectFit
-                source: "search.png"
+                Layout.preferredHeight: parent.height
+                Layout.preferredWidth: parent.width / 5
+                Image {
+
+                    anchors.fill: parent
+                    id: image2
+
+                    fillMode: Image.PreserveAspectFit
+                    source: "search.png"
+                }
             }
 
             RoundButton {
+                Layout.maximumHeight: parent.height / 1.5
+                Layout.fillHeight: true
                 id: roundButton1
-                Layout.preferredHeight: parent.height - 5
-
-                //  Layout.minimumHeight: parent.height / 20
-                // width: 245
-                // height: 49
                 text: " Искать прокат"
-               // font.pointSize: 34
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                font.pixelSize: 64
             }
         }
         Item {
@@ -173,3 +193,37 @@ Designer {
 }
 ##^##*/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*##^## Designer {
+    D{i:0;autoSize:true;height:480;width:640}
+}
+ ##^##*/
