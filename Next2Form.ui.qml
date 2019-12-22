@@ -50,8 +50,7 @@ Page {
 
     ColumnLayout {
         id: columnLayout
-        width: 100
-        height: 100
+        anchors.fill: parent
 
         Text {
             id: element3

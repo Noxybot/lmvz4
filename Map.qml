@@ -113,10 +113,12 @@ Page {
                 anchorPoint.y: image.height
 
                 sourceItem: Column {
+
+
                     Image {
                         MouseArea {anchors.fill: parent;
                         onClicked: {zabron.visible = true; zabron.street = title} }
-                        id: image; width: 30; height: 30; source: "ic_location_on_black_48dp.png" }
+                        id: image; width: 60; height: 60; source: "ic_location_on_black_48dp.png" }
                     Text { text: title; /*font.bold: true*/ }
                 }
             }

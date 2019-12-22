@@ -42,7 +42,7 @@ Page {
 
     Text {
         id: resetText
-        text: qsTr("Retrieve Password")
+        text: qsTr("Восстановление пароля")
         font.pointSize: 24
         anchors.top: parent.top
         anchors.topMargin: 30
@@ -58,11 +58,11 @@ Page {
 
         TextField {
             id: registeredUsername
-            placeholderText: qsTr("User name")
+            placeholderText: qsTr("Имя пользователя")
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
-            font.pointSize: 14
+            font.pointSize: 34
             font.family: "fontawesome"
             leftPadding: 30
             background: Rectangle {
@@ -93,11 +93,11 @@ Page {
 
         TextField {
             id: registeredHint
-            placeholderText: qsTr("Password Hint")
+            placeholderText: qsTr("Подсказка к паролю")
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
-            font.pointSize: 14
+            font.pointSize: 34
             font.family: "fontawesome"
             leftPadding: 30
             echoMode: TextField.PasswordEchoOnEdit
@@ -134,7 +134,7 @@ Page {
             height: 50
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
-            name: "Retrieve"
+            name: "Восстановить"
             baseColor: mainAppColor
             borderColor: mainAppColor
             onClicked: initiateRetrieval()
@@ -146,7 +146,7 @@ Page {
 
         Text {
             id: helpText
-            text: qsTr("Your Password is,")
+            text: qsTr("Ваш пароль: ")
             font.pointSize: 16
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignLeft

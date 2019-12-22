@@ -95,7 +95,7 @@ Page {
             break;
         case 1: message = "Missing credentials!"
             break;
-        case 2: message = "Password does not match!"
+        case 2: message = "Неправильный пароль!"
             break;
         }
 
@@ -111,7 +111,7 @@ Page {
             console.log(results.rows.length)
             if(results.rows.length !== 0)
             {
-                popup.popMessage = "User already exist!"
+                popup.popMessage = "Данное имя занято!"
                 popup.open()
                 return
             }
@@ -165,7 +165,7 @@ Page {
         var pword = ""
         if(ret)
         {
-            message = "Missing credentials!"
+            message = "Недостаточно данных!"
             popup.popMessage = message
             popup.open()
             return ""
