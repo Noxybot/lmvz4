@@ -12,12 +12,10 @@ Page {
         Layout.fillWidth: true
         height: parent.height / 9.9
 
-
         RowLayout {
             Layout.topMargin: 0
 
             anchors.fill: parent
-            Layout.fillWidth: true
             id: row4
             Item {
                 Layout.maximumHeight: parent.height
@@ -50,7 +48,6 @@ Page {
         id: columnLayout
         anchors.fill: parent
 
-
         RowLayout {
             id: row3
             width: 200
@@ -73,15 +70,14 @@ Page {
             id: row2
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
-
             Label {
-         // font.pixelSize: 74
+                // font.pixelSize: 74
                 id: label
                 text: qsTr("Логин: ")
             }
 
             Label {
-              //  font.pixelSize: 74
+                //  font.pixelSize: 74
                 id: login
                 color: "#0b28dc"
                 text: qsTr("username")
@@ -95,13 +91,13 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
-               // font.pixelSize: 74
+                // font.pixelSize: 74
                 id: label4
                 text: qsTr("Сохраненная карта: ")
             }
 
             Label {
-               // font.pixelSize:
+                // font.pixelSize:
                 id: label5
                 color: "#0b28dc"
                 text: qsTr("0000000000000000")
@@ -126,15 +122,15 @@ Page {
         }
         Item {
             Layout.maximumHeight: parent.height / 3
-            Layout.maximumWidth: parent.width  - 20
+            Layout.maximumWidth: parent.width - 20
             Layout.preferredHeight: parent.height
             Layout.preferredWidth: parent.width
-        Image {
-            id: image
-            anchors.fill: parent
-            fillMode: Image.PreserveAspectFit
-            source: "28062017092831.9.jpg"
-        }
+            Image {
+                id: image
+                anchors.fill: parent
+                fillMode: Image.PreserveAspectFit
+                source: "28062017092831.9.jpg"
+            }
         }
     }
 }
@@ -144,3 +140,4 @@ Designer {
     D{i:0;autoSize:true;height:480;width:640}
 }
 ##^##*/
+
