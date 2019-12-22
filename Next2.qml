@@ -1,11 +1,11 @@
 import QtQuick 2.4
-import QtQuick.Controls 2.10
+import QtQuick.Controls 2.3
 
 Next2Form {
     button.onClicked: {stack.pop(); stack.pop(); stack.pop(); stack.pop()
 }
-    back.onClicked: {stack.pop()
-    }
+//    back.onClicked: {stack.pop()
+//    }
     property bool opened: false
     mouseArea.onClicked: { console.log("hello");  opened = !opened; if (opened) pop.open();
 }

@@ -1,107 +1,105 @@
 import QtQuick 2.4
 import QtQuick.Controls 2.3
+import QtQuick.Layouts 1.3
 
 Page {
-    width: 300
-    height: 700
+    anchors.fill: parent
     property alias mouseArea: mouseArea
     property alias button: button
-    property alias back: back
-    property alias image1: image1
 
-    ToolBar {
-        id: toolBar
-        x: 0
-        y: 0
-        width: 300
-        height: 50
+        header: ToolBar {
+            id: toolBar
+            Layout.topMargin: 0
+            Layout.fillWidth: true
+            Layout.maximumHeight: parent.height / 9.9
+            Layout.preferredHeight: parent.height / 9.9
+
+            RowLayout {
+                anchors.fill: parent
+
+
+            Text {
+                Layout.alignment: Qt.AlignHCenter
+                id: element2
+                color: "#ffffff"
+                text: qsTr("Бронирование")
+                font.bold: true
+                font.pixelSize: 27
+            }
+            Item {
+                Layout.maximumHeight: parent.height
+                Layout.maximumWidth: parent.width / 5
+                Layout.preferredHeight: parent.height
+                Layout.preferredWidth: parent.width / 5
+
+            Image {
+                id: image2
+                anchors.fill: parent
+                antialiasing: true
+                fillMode: Image.PreserveAspectFit
+                source: "help.png"
+
+                MouseArea {
+                    id: mouseArea
+    anchors.fill: parent
+                }
+            }
+            }
+        }
+        }
+
+    ColumnLayout {
+        id: columnLayout
+        width: 100
+        height: 100
 
         Text {
-            id: element2
-            x: 85
-            y: 15
-            color: "#ffffff"
-            text: qsTr("Бронирование")
+            id: element3
+            color: "#0b28dc"
+            text: qsTr("Шаг 3/3")
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             font.bold: true
             font.pixelSize: 17
         }
 
-        Image {
-            id: image2
-            x: 250
-            y: 0
-            width: 50
-            height: 50
-            antialiasing: true
-            fillMode: Image.PreserveAspectFit
-            source: "help.png"
+        Label {
+            id: label
+            text: qsTr("Заказ оформлен")
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+        }
 
-            MouseArea {
-                id: mouseArea
-                x: 0
-                y: 4
-                width: 50
-                height: 42
+        Label {
+            id: label1
+            text: qsTr("Код будет сохранен в личном кабинете")
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+        }
+
+        Item {
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Layout.maximumHeight: parent.height / 3
+            Layout.maximumWidth: parent.width  - 20
+            Layout.preferredHeight: parent.height
+            Layout.preferredWidth: parent.width
+
+            Image {
+                anchors.fill: parent
+                id: image
+                source: "28062017092831.9.jpg"
+                fillMode: Image.PreserveAspectFit
             }
         }
-    }
 
-    Image {
-        id: image
-        x: 23
-        y: 172
-        width: 255
-        height: 136
-        source: "28062017092831.9.jpg"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Button {
-        id: button
-        x: 170
-        y: 639
-        width: 122
-        height: 48
-        text: qsTr("ОК")
-    }
-
-    Image {
-        MouseArea {
-            id: back
-            anchors.rightMargin: 37
-            anchors.bottomMargin: 26
-            anchors.fill: parent
+        Button {
+            id: button
+            font.pixelSize: 67
+            text: qsTr("ОК")
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         }
-        id: image1
-        x: 0
-        y: 0
-        width: 57
-        height: 49
-        source: "ic_keyboard_backspace_black_48dp.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Text {
-        id: element3
-        x: 113
-        y: 63
-        color: "#0b28dc"
-        text: qsTr("Шаг 3/3")
-        font.bold: true
-        font.pixelSize: 17
-    }
-
-    Label {
-        id: label
-        x: 98
-        y: 109
-        text: qsTr("Заказ оформлен")
-    }
-
-    Label {
-        id: label1
-        x: 23
-        y: 132
-        text: qsTr("Код будет сохранен в личном кабинете")
     }
 }
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:640}
+}
+##^##*/

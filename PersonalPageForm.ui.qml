@@ -5,86 +5,83 @@ import QtQuick.Layouts 1.3
 
 Page {
     id: element1
-    // width: 300
-    //height: 700
     property alias columnLayout: columnLayout
     property alias mouseArea: mouseArea
     property alias username: username
-    //property alias label: username
-    //property alias back: back
     property alias image: image
     property alias person: person
     property alias roundButton: roundButton
     property alias roundButton1: roundButton1
     transformOrigin: Item.Center
     visible: true
+    header: ToolBar {
+        id: toolBar
+        Layout.fillWidth: true
+        Layout.maximumHeight: parent.height / 9.9
+        Layout.preferredHeight: parent.height / 9.9
+        RowLayout {
+            Layout.fillWidth: true
+            id: rowLayout3
+            anchors.bottomMargin: 0
+            anchors.fill: parent
 
+            Item {
+                Layout.maximumHeight: parent.height
+                Layout.maximumWidth: parent.width / 4
+                Layout.preferredHeight: parent.height
+                Layout.preferredWidth: parent.width / 5
+
+            Image {
+                anchors.fill: parent
+
+                id: image3
+                anchors.left: parent.left
+                anchors.leftMargin: 0
+                anchors.top: parent.top
+                anchors.topMargin: 0
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 0
+                fillMode: Image.PreserveAspectFit
+
+                source: "ic_keyboard_backspace_black_48dp.png"
+
+                MouseArea {
+                    id: mouseArea
+                    anchors.rightMargin: 0
+                    anchors.fill: parent
+                }
+            }
+            }
+            Item {
+                Layout.alignment: Qt.AlignRight
+                Layout.maximumHeight: parent.height
+                Layout.maximumWidth: parent.width / 4
+                Layout.preferredHeight: parent.height
+                Layout.preferredWidth: parent.width / 5
+
+            Image {
+               anchors.fill: parent
+                MouseArea {
+                    id: person
+                    anchors.fill: parent
+                }
+                id: image
+                Layout.alignment: Qt.AlignRight
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+                antialiasing: true
+                fillMode: Image.PreserveAspectFit
+                source: "person.png"
+            }
+            }
+        }
+    }
     ColumnLayout {
         id: columnLayout
         anchors.fill: parent
 
 
-        ToolBar {
-            id: toolBar
-            Layout.fillWidth: true
-            Layout.preferredHeight: parent.height / 9.9
-            RowLayout {
-                Layout.fillWidth: true
-                id: rowLayout3
-                anchors.bottomMargin: 0
-                anchors.fill: parent
 
-                Item {
-                    Layout.maximumHeight: parent.height
-                    Layout.maximumWidth: parent.width / 4
-                    Layout.preferredHeight: parent.height
-                    Layout.preferredWidth: parent.width / 5
-
-                Image {
-                    anchors.fill: parent
-
-                    id: image3
-                    anchors.left: parent.left
-                    anchors.leftMargin: 0
-                    anchors.top: parent.top
-                    anchors.topMargin: 0
-                    anchors.bottom: parent.bottom
-                    anchors.bottomMargin: 0
-                    fillMode: Image.PreserveAspectFit
-
-                    source: "ic_keyboard_backspace_black_48dp.png"
-
-                    MouseArea {
-                        id: mouseArea
-                        anchors.rightMargin: 0
-                        anchors.fill: parent
-                    }
-                }
-                }
-                Item {
-                    Layout.alignment: Qt.AlignRight
-                    Layout.maximumHeight: parent.height
-                    Layout.maximumWidth: parent.width / 4
-                    Layout.preferredHeight: parent.height
-                    Layout.preferredWidth: parent.width / 5
-
-                Image {
-                   anchors.fill: parent
-                    MouseArea {
-                        id: person
-                        anchors.fill: parent
-                    }
-                    id: image
-                    Layout.alignment: Qt.AlignRight
-                    anchors.top: parent.top
-                    anchors.bottom: parent.bottom
-                    antialiasing: true
-                    fillMode: Image.PreserveAspectFit
-                    source: "person.png"
-                }
-                }
-            }
-        }
         Item {
             id: element111
             height: 200

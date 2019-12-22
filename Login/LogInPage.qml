@@ -42,7 +42,7 @@ Page {
             color: mainTextCOlor
             font.pointSize: 34
             font.family: "fontawesome"
-            leftPadding: 30
+            leftPadding: 50
             background: Rectangle {
                 implicitWidth: 200
                 implicitHeight: 50
@@ -77,7 +77,7 @@ Page {
             color: mainTextCOlor
             font.pointSize: 34
             font.family: "fontawesome"
-            leftPadding: 30
+            leftPadding: 50
             echoMode: TextField.PasswordEchoOnEdit
             background: Rectangle {
                 implicitWidth: 200

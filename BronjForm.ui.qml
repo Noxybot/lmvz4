@@ -1,9 +1,10 @@
 import QtQuick 2.4
 import QtQuick.Controls 2.3
+import QtQuick.Layouts 1.2
 
 Page {
-    width: 300
-    height: 700
+    id: page
+    anchors.fill: parent
     property alias mouseArea: mouseArea
     property alias type: type
     property alias amount: amount
@@ -14,193 +15,216 @@ Page {
     property alias image1: image1
     property alias street: street
 
-    header: ToolBar {
-        height: 50
+        header: ToolBar {
+            Layout.topMargin: 0
+            Layout.fillWidth: true
+            Layout.maximumHeight: parent.height / 9.9
+            Layout.preferredHeight: parent.height / 9.9
+
+            RowLayout {
+                anchors.fill: parent
+                Item {
+                    Layout.maximumHeight: parent.height
+                    Layout.maximumWidth: parent.width / 5
+                    Layout.preferredHeight: parent.height
+                    Layout.preferredWidth: parent.width / 5
+                    Image {
+                        anchors.fill: parent
+                        id: image1
+                        source: "ic_keyboard_backspace_black_48dp.png"
+                        fillMode: Image.PreserveAspectFit
+
+                        MouseArea {
+                            id: mouseArea1
+                            anchors.fill: parent
+                        }
+                    }
+                }
+                Text {
+                    id: element7
+                    color: "#ffffff"
+                    text: qsTr("Бронирование")
+                    font.bold: true
+                    font.pixelSize: 27
+                }
+                Item {
+                    Layout.maximumHeight: parent.height
+                    Layout.maximumWidth: parent.width / 5
+                    Layout.preferredHeight: parent.height
+                    Layout.preferredWidth: parent.width / 5
+
+                    Image {
+                        anchors.fill: parent
+                        id: image2
+                        antialiasing: true
+                        fillMode: Image.PreserveAspectFit
+                        source: "help.png"
+                        MouseArea {
+                            id: mouseArea
+                            anchors.fill: parent
+                        }
+                    }
+                }
+            }
+        }
+
+    ColumnLayout {
+        id: columnLayout
+        anchors.fill: parent
 
         Text {
-            id: element7
-            x: 85
-            y: 15
-            color: "#ffffff"
-            text: qsTr("Бронирование")
+            id: element
+            color: "#0b28dc"
+            text: qsTr("Шаг 1/3")
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            anchors.horizontalCenter: parent.horizontalCenter
             font.bold: true
-            font.pixelSize: 17
-        }
-        Image {
-            id: image1
-            x: 0
-            y: -5
-            width: 58
-            height: 60
-            z: 3.804
-            source: "ic_keyboard_backspace_black_48dp.png"
-            fillMode: Image.PreserveAspectFit
-
-            MouseArea {
-                id: mouseArea1
-                x: 0
-                y: 8
-                width: 50
-                height: 44
-            }
-        }
-        Image {
-            id: image2
-            x: 247
-            y: -20
-            width: 53
-            height: 87
-            antialiasing: true
-            z: 51.63
-            fillMode: Image.PreserveAspectFit
-            source: "help.png"
+            font.pixelSize: 19
         }
 
-        MouseArea {
-            id: mouseArea
-            x: 252
-            y: 0
-            width: 53
-            height: 50
-        }
-    }
+        RowLayout {
+            id: rowLayout
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
-    ComboBox {
-        id: tarif
-        x: 84
-        y: 175
-        width: 200
-        height: 48
-        currentIndex: 0
-        model: ListModel {
-            id: cbItems
-            ListElement {
-                text: "Часовой 30грн./час"
+            Label {
+                id: label
+                text: qsTr("Забронировать на:")
             }
-            ListElement {
-                text: "Дневной 300грн./день"
-            }
-            ListElement {
-                text: "На месяц 1000грн/месяц"
+
+            Label {
+                id: street
+                text: qsTr("ул. Сумская, 37")
             }
         }
-    }
 
-    SpinBox {
-        id: hours
-        x: 122
-        y: 261
-        width: 120
-        height: 33
-    }
+        RowLayout {
+            id: rowLayout1
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
-    SpinBox {
-        id: amount
-        x: 122
-        y: 339
-        width: 120
-        height: 35
-    }
+            ComboBox {
+                id: tarif
 
-    ComboBox {
-        id: type
-        x: 109
-        y: 407
-        width: 175
-        height: 48
-        currentIndex: 0
-        model: ListModel {
-            id: cbItems2
-            ListElement {
-                text: "Городской"
+                currentIndex: 0
+                model: ListModel {
+                    id: cbItems
+                    ListElement {
+                        text: "Часовой 30грн./час"
+                    }
+                    ListElement {
+                        text: "Дневной 300грн./день"
+                    }
+                    ListElement {
+                        text: "На месяц 1000грн/месяц"
+                    }
+                }
             }
-            ListElement {
-                text: "Горный"
+
+            Label {
+                id: label2
+                width: 277
+                height: 17
+                text: qsTr("Тариф")
             }
-            ListElement {
-                text: "Детский"
+
+        }
+
+        RowLayout {
+            id: rowLayout2
+            width: 100
+            height: 100
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+
+            Label {
+                id: label3
+                text: qsTr("На")
+            }
+
+            SpinBox {
+                id: hours
+                width: 120
+                height: 33
+            }
+
+            Label {
+                id: label4
+                text: qsTr("часа")
+            }
+
+
+
+        }
+
+        RowLayout {
+            id: rowLayout3
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+
+
+            Label {
+                id: label5
+                text: qsTr("Количество")
+            }
+
+            SpinBox {
+                id: amount
+            }
+
+
+            Label {
+                id: label7
+                text: qsTr("штук")
             }
         }
+
+        RowLayout {
+            id: rowLayout4
+            width: 100
+            height: 100
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+
+            ComboBox {
+                id: type
+                width: 175
+                height: 48
+                currentIndex: 0
+                model: ListModel {
+                    id: cbItems2
+                    ListElement {
+                        text: "Городской"
+                    }
+                    ListElement {
+                        text: "Горный"
+                    }
+                    ListElement {
+                        text: "Детский"
+                    }
+                }
+            }
+
+            Label {
+                id: label6
+                text: qsTr("Категория")
+            }
+
+        }
+
+        Button {
+            id: button
+            text: qsTr("Далее")
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            font.pixelSize: 64
+
+        }
+
+
     }
 
-    Button {
-        id: button
-        x: 174
-        y: 590
-        width: 110
-        height: 49
-        text: qsTr("Далее")
-    }
-
-
-
-
-
-    Label {
-        id: label
-        x: 27
-        y: 114
-        text: qsTr("Забронировать на:")
-    }
-
-    Label {
-        id: street
-        x: 186
-        y: 114
-        text: qsTr("ул. Сумская, 37")
-    }
-
-    Label {
-        id: label2
-        x: 27
-        y: 190
-        text: qsTr("Тариф")
-    }
-
-    Label {
-        id: label3
-        x: 27
-        y: 269
-        text: qsTr("На")
-    }
-
-    Label {
-        id: label4
-        x: 256
-        y: 269
-        text: qsTr("часа")
-    }
-
-    Label {
-        id: label5
-        x: 27
-        y: 348
-        text: qsTr("Количество")
-    }
-
-    Text {
-        id: element
-        x: 109
-        y: 30
-        color: "#0b28dc"
-        text: qsTr("Шаг 1/3")
-        font.bold: true
-        font.pixelSize: 19
-    }
-
-    Label {
-        id: label6
-        x: 27
-        y: 422
-        text: qsTr("Категория")
-    }
-
-    Label {
-        id: label7
-        x: 256
-        y: 348
-        text: qsTr("штук")
-    }
 
 
 }
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:640}
+}
+##^##*/
+
