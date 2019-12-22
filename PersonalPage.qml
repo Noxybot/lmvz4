@@ -2,7 +2,7 @@ import QtQuick 2.4
 
 PersonalPageForm {
     property string pass;
-    mouseArea.onClicked: {stackView.pop()
+    mouseArea.onClicked: {stack.pop()
 }
    // property alias usrname: username
     // username.onDestroyed: {

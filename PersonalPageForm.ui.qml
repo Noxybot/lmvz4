@@ -1,11 +1,13 @@
 import QtQuick 2.4
 import QtQuick.Controls 2.1
 import QtQuick.Controls.Material 2.0
+import QtQuick.Layouts 1.3
 
 Page {
     id: element1
-    width: 300
-    height: 700
+    // width: 300
+    //height: 700
+    property alias columnLayout: columnLayout
     property alias mouseArea: mouseArea
     property alias username: username
     //property alias label: username
@@ -17,101 +19,156 @@ Page {
     transformOrigin: Item.Center
     visible: true
     header: ToolBar {
+        id: toolBar
         height: 50
+        anchors.right: parent.right
+        anchors.rightMargin: 0
+        anchors.left: parent.left
+        anchors.leftMargin: 0
 
-        Image {
+        RowLayout {
+            Layout.fillWidth: true
+            id: rowLayout3
+            anchors.fill: parent
+            Image {
 
-            id: image3
-            x: 0
-            y: 0
-            width: 54
-            height: 50
-            fillMode: Image.PreserveAspectFit
-            source: "ic_keyboard_backspace_black_48dp.png"
-
-            MouseArea {
-                id: mouseArea
-                x: 8
-                y: 8
-                width: 46
-                height: 34
-            }
-        }
-        Image {
-            MouseArea {
-                anchors.fill: parent
-                id: person
-                anchors.rightMargin: 0
-                anchors.bottomMargin: 1
+                id: image3
+                anchors.left: parent.left
                 anchors.leftMargin: 0
-                anchors.topMargin: -1
+                anchors.top: parent.top
+                anchors.topMargin: 0
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 0
+                fillMode: Image.PreserveAspectFit
+                source: "ic_keyboard_backspace_black_48dp.png"
+
+                MouseArea {
+                    id: mouseArea
+                    anchors.rightMargin: 0
+                    anchors.fill: parent
+                }
             }
-            id: image
-            x: 249
-            y: 0
-            width: 51
+            Image {
+                MouseArea {
+                    id: person
+                    anchors.fill: parent
+                }
+                id: image
+                Layout.alignment: Qt.AlignRight
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+                antialiasing: true
+                fillMode: Image.PreserveAspectFit
+                source: "person.png"
+            }
+        }
+    }
+
+    ColumnLayout {
+        id: columnLayout
+        anchors.fill: parent
+
+        RowLayout {
+            id: rowLayout2
+            width: 100
+            height: 100
+            Layout.fillHeight: false
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Layout.fillWidth: true
+
+            Label {
+                id: element
+                width: 186
+                height: 31
+                text: qsTr("Здравствуйте, ")
+                font.pixelSize: 24
+            }
+
+            Label {
+                id: username
+                text: qsTr("username")
+            }
+        }
+
+        Item {
+            id: element4
+            width: 200
+            height: 100
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+        }
+
+        RowLayout {
+            id: rowLayout
+            width: 100
+            height: 100
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Layout.fillWidth: true
+
+            RoundButton {
+                id: roundButton
+                Layout.alignment: Qt.ФФ | Qt.AlignVCenter
+
+                width: 215
+                height: 52
+                text: "Конец проката"
+                font.pointSize: 11
+            }
+
+            Item {
+                id: element2
+                Layout.fillWidth: true
+            }
+
+            Image {
+                id: image1
+                Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+                fillMode: Image.PreserveAspectFit
+                source: "time.png"
+            }
+
+        }
+
+        RowLayout {
+            id: rowLayout1
+            width: 100
+            height: 100
+            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+
+            RoundButton {
+                id: roundButton1
+                width: 215
+                height: 49
+                text: " Искать прокат"
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                font.pointSize: 11
+            }
+
+            Item {
+                id: element3
+                Layout.fillWidth: true
+            }
+            Image {
+
+                id: image2
+                Layout.maximumHeight: 48
+                Layout.maximumWidth: 48
+                Layout.alignment: Qt.AlignRight
+                // fillMode: Image.PreserveAspectFit
+                source: "search.png"
+            }
+        }
+        Item {
+            id: element5
             height: 50
-            antialiasing: true
-            z: 3
-            fillMode: Image.PreserveAspectFit
-            source: "person.png"
         }
-    }
-
-
-
-    Label {
-        id: element
-        x: 15
-        y: 141
-        width: 186
-        height: 31
-        text: qsTr("Здравствуйте, ")
-        font.pixelSize: 24
-
-        Label {
-            id: username
-            x: 189
-            y: 0
-            text: qsTr("username")
-        }
-    }
-
-    Image {
-        id: image2
-        x: 8
-        y: 438
-        width: 62
-        height: 58
-        fillMode: Image.PreserveAspectFit
-        source: "search.png"
-    }
-
-    RoundButton {
-        id: roundButton
-        x: 76
-        y: 376
-        width: 215
-        height: 52
-        text: "Конец проката"
-        font.pointSize: 11
-    }
-
-    RoundButton {
-        id: roundButton1
-        x: 76
-        y: 447
-        width: 215
-        height: 49
-        text: " Искать прокат"
-        font.pointSize: 11
-    }
-
-    Image {
-        id: image1
-        x: 8
-        y: 376
-        fillMode: Image.PreserveAspectFit
-        source: "time.png"
     }
 }
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:640}D{i:1;anchors_height:50}
+}
+##^##*/
+
