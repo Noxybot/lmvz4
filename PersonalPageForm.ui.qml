@@ -17,8 +17,7 @@ Page {
     header: ToolBar {
         id: toolBar
         Layout.fillWidth: true
-        Layout.maximumHeight: parent.height / 9.9
-        Layout.preferredHeight: parent.height / 9.9
+        height: parent.height / 9.9
         RowLayout {
             Layout.fillWidth: true
             id: rowLayout3

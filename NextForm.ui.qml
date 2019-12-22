@@ -16,8 +16,7 @@ Page {
     header: ToolBar {
         Layout.topMargin: 0
         Layout.fillWidth: true
-        Layout.maximumHeight: parent.height / 9.9
-        Layout.preferredHeight: parent.height / 9.9
+        height: parent.height / 9.9
 
         RowLayout {
             anchors.fill: parent
@@ -36,7 +35,7 @@ Page {
 
                     MouseArea {
                         id: mouseArea
-                       anchors.fill: parent
+                        anchors.fill: parent
                     }
                 }
             }
@@ -48,6 +47,7 @@ Page {
                 font.pixelSize: 27
             }
             Item {
+                Layout.alignment: Qt.AlignRight
                 Layout.maximumHeight: parent.height
                 Layout.maximumWidth: parent.width / 5
                 Layout.preferredHeight: parent.height
@@ -68,10 +68,6 @@ Page {
         }
     }
 
-
-
-
-
     ColumnLayout {
         id: columnLayout
         anchors.fill: parent
@@ -79,6 +75,7 @@ Page {
             id: element
             color: "#0b28dc"
             text: qsTr("Шаг 2/3")
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             font.bold: true
             font.pixelSize: 19
         }
@@ -98,7 +95,6 @@ Page {
                 id: street
                 text: qsTr("ул. Сумская, 37")
             }
-
         }
 
         RowLayout {
@@ -116,7 +112,6 @@ Page {
                 id: label2
                 text: qsTr("Тариф")
             }
-
         }
 
         RowLayout {
@@ -134,7 +129,6 @@ Page {
                 id: label4
                 text: qsTr("На ")
             }
-
         }
 
         RowLayout {
@@ -164,9 +158,6 @@ Page {
                 id: type
                 text: qsTr("Городской")
             }
-
-
-
         }
 
         RowLayout {
@@ -187,20 +178,14 @@ Page {
                 text: qsTr("90 грн.")
                 font.bold: true
             }
-
-
         }
 
         RowLayout {
             id: rowLayout5
-            width: 100
-            height: 100
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             ComboBox {
                 id: comboBox
-                width: 244
-                height: 48
                 currentIndex: 0
                 model: ListModel {
                     id: cbItems
@@ -217,7 +202,6 @@ Page {
                 id: label10
                 text: qsTr("Выберите способ оплаты")
             }
-
         }
 
         Button {
@@ -226,8 +210,6 @@ Page {
             text: qsTr("Далее")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         }
-
-
     }
 }
 
@@ -236,3 +218,4 @@ Designer {
     D{i:0;autoSize:true;height:480;width:640}
 }
 ##^##*/
+

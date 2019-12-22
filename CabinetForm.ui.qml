@@ -10,8 +10,8 @@ Page {
     id: page
     header: ToolBar {
         Layout.fillWidth: true
-        Layout.maximumHeight: parent.height / 9.9
-        Layout.preferredHeight: parent.height / 9.9
+        height: parent.height / 9.9
+
 
         RowLayout {
             Layout.topMargin: 0
@@ -55,6 +55,7 @@ Page {
             id: row3
             width: 200
             height: 400
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
                 id: label1
@@ -70,6 +71,7 @@ Page {
 
         RowLayout {
             id: row2
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
 
             Label {
@@ -90,6 +92,7 @@ Page {
             id: row1
             width: 200
             height: 400
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
                // font.pixelSize: 74
@@ -109,6 +112,7 @@ Page {
             id: row
             width: 200
             height: 400
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
                 id: label6

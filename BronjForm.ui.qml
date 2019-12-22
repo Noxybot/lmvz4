@@ -18,8 +18,8 @@ Page {
         header: ToolBar {
             Layout.topMargin: 0
             Layout.fillWidth: true
-            Layout.maximumHeight: parent.height / 9.9
-            Layout.preferredHeight: parent.height / 9.9
+            height: parent.height / 9.9
+
 
             RowLayout {
                 anchors.fill: parent

@@ -9,8 +9,8 @@ Page {
     header: ToolBar {
         Layout.topMargin: 0
         Layout.fillWidth: true
-        Layout.maximumHeight: parent.height / 9.9
-        Layout.preferredHeight: parent.height / 9.9
+        height: parent.height / 9.9
+
 
         RowLayout {
             anchors.fill: parent
@@ -35,7 +35,6 @@ Page {
             }
             Text {
                 id: element4
-
                 color: "#ffffff"
                 text: qsTr("Конец текущих прокатов")
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
@@ -61,6 +60,7 @@ Page {
         }
         Label {
             id: label
+            font.pixelSize: 30
             text: qsTr("ул. Сумская, 37")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         }
@@ -72,11 +72,13 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
+                font.pixelSize: 30
                 id: label1
                 text: qsTr("До конца проката осталось: ")
             }
 
             Label {
+                font.pixelSize: 30
                 id: label2
                 color: "#0b28dc"
                 text: qsTr("3 часа 0 минут 0 секунд")

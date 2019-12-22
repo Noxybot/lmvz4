@@ -7,16 +7,14 @@ Page {
     property alias mouseArea: mouseArea
     property alias button: button
 
-        header: ToolBar {
-            id: toolBar
-            Layout.topMargin: 0
-            Layout.fillWidth: true
-            Layout.maximumHeight: parent.height / 9.9
-            Layout.preferredHeight: parent.height / 9.9
+    header: ToolBar {
+        id: toolBar
+        Layout.topMargin: 0
+        Layout.fillWidth: true
+        height: parent.height / 9.9
 
-            RowLayout {
-                anchors.fill: parent
-
+        RowLayout {
+            anchors.fill: parent
 
             Text {
                 Layout.alignment: Qt.AlignHCenter
@@ -27,26 +25,27 @@ Page {
                 font.pixelSize: 27
             }
             Item {
+                Layout.alignment: Qt.AlignRight
                 Layout.maximumHeight: parent.height
                 Layout.maximumWidth: parent.width / 5
                 Layout.preferredHeight: parent.height
                 Layout.preferredWidth: parent.width / 5
 
-            Image {
-                id: image2
-                anchors.fill: parent
-                antialiasing: true
-                fillMode: Image.PreserveAspectFit
-                source: "help.png"
+                Image {
+                    id: image2
+                    anchors.fill: parent
+                    antialiasing: true
+                    fillMode: Image.PreserveAspectFit
+                    source: "help.png"
 
-                MouseArea {
-                    id: mouseArea
-    anchors.fill: parent
+                    MouseArea {
+                        id: mouseArea
+                        anchors.fill: parent
+                    }
                 }
             }
-            }
         }
-        }
+    }
 
     ColumnLayout {
         id: columnLayout
@@ -76,7 +75,7 @@ Page {
         Item {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.maximumHeight: parent.height / 3
-            Layout.maximumWidth: parent.width  - 20
+            Layout.maximumWidth: parent.width - 20
             Layout.preferredHeight: parent.height
             Layout.preferredWidth: parent.width
 
@@ -102,3 +101,4 @@ Designer {
     D{i:0;autoSize:true;height:480;width:640}
 }
 ##^##*/
+
