@@ -57,16 +57,18 @@ Page {
             text: qsTr("Шаг 3/3")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             font.bold: true
-            font.pixelSize: 17
+            font.pointSize: 25
         }
 
         Label {
+            font.pointSize: 25
             id: label
             text: qsTr("Заказ оформлен")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         }
 
         Label {
+            font.pointSize: 25
             id: label1
             text: qsTr("Код будет сохранен в личном кабинете")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
@@ -89,7 +91,7 @@ Page {
 
         Button {
             id: button
-            font.pixelSize: 67
+            font.pixelSize: 64
             text: qsTr("ОК")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         }

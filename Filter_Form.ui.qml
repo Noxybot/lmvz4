@@ -9,8 +9,7 @@ Page {
         Layout.topMargin: 0
         id: toolBar
         Layout.fillWidth: true
-        Layout.maximumHeight: parent.height / 9.9
-        Layout.preferredHeight: parent.height / 9.9
+        height: parent.height / 9.9
         RowLayout {
             Layout.topMargin: 0
             anchors.fill: parent
@@ -38,7 +37,7 @@ Page {
                 color: "#ffffff"
                 text: qsTr("Выберите фильтры")
                 font.bold: true
-                font.pixelSize: 27
+                font.pixelSize: 34
             }
         }
     }
@@ -51,14 +50,18 @@ Page {
 
 
         RowLayout {
+            Layout.fillWidth: true
             id: rowLayout
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
+                font.pointSize: 25
                 id: label
                 text: qsTr("Район")
             }
 
             ComboBox {
+                width: 200
                 id: comboBox
                 currentIndex: 0
                 model: ListModel {
@@ -78,12 +81,15 @@ Page {
 
         RowLayout {
             id: rowLayout1
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Label {
+                font.pointSize: 25
                 id: label1
                 text: qsTr("Категория\nвелосипеда ")
             }
 
             ComboBox {
+                width: 200
                 id: comboBox1
                 currentIndex: 0
                 model: ListModel {

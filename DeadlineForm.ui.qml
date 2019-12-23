@@ -53,7 +53,7 @@ Page {
         }
         Label {
             id: label
-            font.pointSize: 30
+            font.pointSize: 25
             text: qsTr("ул. Сумская, 37")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         }
@@ -63,13 +63,13 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
-                font.pointSize: 30
+                font.pointSize: 25
                 id: label1
                 text: qsTr("До конца проката осталось: ")
             }
 
             Label {
-                font.pointSize: 30
+                font.pointSize: 25
                 id: label2
                 color: "#0b28dc"
                 text: qsTr("3 часа 0 минут 0 секунд")

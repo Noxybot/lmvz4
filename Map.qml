@@ -35,7 +35,7 @@ Page {
             color: "#ffffff"
             text: qsTr("Выберите прокат")
             font.bold: true
-            font.pointSize: 34
+            font.pointSize: 27
         }
         Item {
             Layout.alignment: Qt.AlignRight
@@ -79,7 +79,7 @@ Page {
     anchors.fill: parent
     plugin: myPlugin;
     center: QtPositioning.coordinate(49.9885475, 36.2329460)
-    zoomLevel: 13
+    zoomLevel: 14
         ListModel {
             id: markers
 
@@ -147,16 +147,18 @@ Page {
 
 
 
-        Rectangle {
+        Pane {
             property alias street : element1.text
             visible: false
             id: zabron
             Layout.alignment: Qt.AlignHCenter
             Layout.preferredWidth: parent.width - 20
             Layout.preferredHeight: parent.height / 5
+            background: Rectangle {
             color: "#ffffff"
             radius: 18
             border.width: 0
+            }
 
             ColumnLayout {
                 anchors.fill: parent
@@ -180,10 +182,10 @@ Page {
                 Item {Layout.fillWidth: true}
 
             Text {
+                font.pointSize: 30
                 visible: parent.visible
                 id: element1
                 text: qsTr("ул. Сумская, 37")
-                font.pixelSize: 12
             }
             }
             Item {
@@ -210,6 +212,7 @@ Page {
                  visible: parent.visible
                 id: button
 
+                font.pointSize: 30
                 text: "Забронировать"
                 onClicked: stack.push("Bronj.qml", {"street.text": element1.text})
             }

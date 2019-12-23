@@ -77,7 +77,7 @@ Page {
             text: qsTr("Шаг 2/3")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             font.bold: true
-            font.pixelSize: 19
+            font.pointSize: 25
         }
 
         RowLayout {
@@ -87,11 +87,13 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
+                font.pointSize: 25
                 id: label8
-                text: qsTr("Адрес")
+                text: qsTr("Адрес: ")
             }
 
             Label {
+                font.pointSize: 25
                 id: street
                 text: qsTr("ул. Сумская, 37")
             }
@@ -104,13 +106,15 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
-                id: tarif
-                text: qsTr("Часовой 30грн./час")
+                font.pointSize: 25
+                id: label2
+                text: qsTr("Тариф: ")
             }
 
             Label {
-                id: label2
-                text: qsTr("Тариф")
+                font.pointSize: 25
+                id: tarif
+                text: qsTr("Часовой 30грн./час")
             }
         }
 
@@ -121,13 +125,15 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
-                id: time
-                text: qsTr("3 часа")
+                font.pointSize: 25
+                id: label4
+                text: qsTr("На: ")
             }
 
             Label {
-                id: label4
-                text: qsTr("На ")
+                font.pointSize: 25
+                id: time
+                text: qsTr("3 часа")
             }
         }
 
@@ -138,11 +144,13 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
+                font.pointSize: 25
                 id: label9
-                text: qsTr("Количество")
+                text: qsTr("Количество: ")
             }
 
             Label {
+                font.pointSize: 25
                 id: amount
                 width: 11
                 height: 17
@@ -150,11 +158,13 @@ Page {
             }
 
             Label {
+                font.pointSize: 25
                 id: label7
                 text: qsTr("шт.")
             }
 
             Label {
+                font.pointSize: 25
                 id: type
                 text: qsTr("Городской")
             }
@@ -167,12 +177,14 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
+                font.pointSize: 25
                 id: label11
                 color: "#0b28dc"
                 text: qsTr("Сумма")
             }
 
             Label {
+                font.pointSize: 25
                 id: totalsum
                 color: "#0b28dc"
                 text: qsTr("90 грн.")
@@ -184,7 +196,14 @@ Page {
             id: rowLayout5
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
+            Label {
+                font.pointSize: 23
+                id: label10
+                text: qsTr("Выберите способ оплаты")
+            }
+
             ComboBox {
+                width: 200
                 id: comboBox
                 currentIndex: 0
                 model: ListModel {
@@ -197,16 +216,11 @@ Page {
                     }
                 }
             }
-
-            Label {
-                id: label10
-                text: qsTr("Выберите способ оплаты")
-            }
         }
 
         Button {
             id: gonext
-            font.pixelSize: 64
+            font.pointSize: 34
             text: qsTr("Далее")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         }
