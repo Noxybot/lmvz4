@@ -71,7 +71,7 @@ Page {
         }
 
         Label {
-            font.pointSize: 25
+            font.pointSize: 20
             id: label1
             text: qsTr("Код будет сохранен в личном кабинете")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
@@ -92,7 +92,7 @@ Page {
 
         Button {
             id: button
-            font.pixelSize: 64
+            font.pointSize: 34
             text: qsTr("ОК")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         }
