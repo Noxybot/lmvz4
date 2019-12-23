@@ -182,6 +182,7 @@ Page {
                 Item {Layout.fillWidth: true}
 
             Text {
+                Layout.rightMargin: 120
                 Layout.alignment: Qt.AlignLeft
                 font.pointSize: 30
                 visible: parent.visible
@@ -196,6 +197,7 @@ Page {
             RowLayout {
                 Layout.fillWidth: true
                 Item {
+
                     Layout.maximumHeight: parent.height
                     Layout.maximumWidth: parent.width / 4.5
                     Layout.preferredHeight: parent.height
@@ -207,9 +209,11 @@ Page {
                 fillMode: Image.PreserveAspectFit
                 source: "1332193-200.png"
             }
+
                 }
                 Item {Layout.fillWidth: true}
             Button {
+                Layout.rightMargin: 150
                  visible: parent.visible
                 id: button
 

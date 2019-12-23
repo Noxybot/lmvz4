@@ -38,7 +38,7 @@ Page {
                 text: qsTr("Конец текущих прокатов")
                 Layout.alignment: Qt.AlignVCenter
                 font.bold: true
-                font.pointSize: 28
+                font.pointSize: 25
             }
         }
     }
@@ -49,17 +49,21 @@ Page {
 
         Item {
             id: element
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.fillHeight: true
         }
         Label {
             id: label
             font.pointSize: 25
             text: qsTr("ул. Сумская, 37")
+            Layout.fillWidth: false
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         }
 
         RowLayout {
             id: rowLayout
+            Layout.fillHeight: false
+            Layout.fillWidth: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {

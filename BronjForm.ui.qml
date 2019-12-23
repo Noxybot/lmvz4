@@ -87,13 +87,13 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
-                font.pointSize: 25
+                font.pointSize: 21
                 id: label
                 text: qsTr("Забронировать на:")
             }
 
             Label {
-                font.pointSize: 25
+                font.pointSize: 21
                 id: street
                 text: qsTr("ул. Сумская, 37")
             }
