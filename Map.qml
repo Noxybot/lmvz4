@@ -182,13 +182,14 @@ Page {
                 Item {Layout.fillWidth: true}
 
             Text {
-                Layout.rightMargin: 120
+               // Layout.rightMargin: 300
                 Layout.alignment: Qt.AlignLeft
                 font.pointSize: 30
                 visible: parent.visible
                 id: element1
                 text: qsTr("ул. Сумская, 37")
-            }
+           }
+            Item {width: 150}
             }
             Item {
                Layout.fillHeight: true
@@ -213,7 +214,7 @@ Page {
                 }
                 Item {Layout.fillWidth: true}
             Button {
-                Layout.rightMargin: 150
+                //Layout.rightMargin: 300
                  visible: parent.visible
                 id: button
 
@@ -221,6 +222,7 @@ Page {
                 text: "Забронировать"
                 onClicked: stack.push("Bronj.qml", {"street.text": element1.text})
             }
+            Item {width: 150}
             }
 
         }
