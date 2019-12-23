@@ -13,7 +13,7 @@ NextForm {
         background: Rectangle {anchors.fill: parent;color: "white"}
         Layout.alignment: Qt.AlignHCenter
         id:pop
-        Label {font.pixelSize: 24;text: "Оплата осуществляется с помщью\nсохраненной карты в приложении\nили наличными на точке проката"}
+        Label {font.pixelSize: 34;text: "Оплата осуществляется с помщью\nсохраненной карты в приложении\nили наличными на точке проката"}
     }
     //mouseArea2.onClicked: {console.log("hello");  opened = !opened; if (opened) pop.open();
 //}

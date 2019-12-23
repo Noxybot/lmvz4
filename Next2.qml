@@ -8,7 +8,7 @@ Next2Form {
         x: parent.width / 2 - 60
         background: Rectangle {anchors.fill: parent;color: "white"}
         id:pop
-        Label {font.pixelSize: 24; text: "/Воспользуйтесь кодом на месте проката,\n откройте в личном кабинете и\nотсканируйте его"}
+        Label {font.pixelSize: 34; text: "Воспользуйтесь кодом на месте проката,\n откройте в личном кабинете и\nотсканируйте его"}
     }
     button.onClicked: {stack.pop(); stack.pop(); stack.pop(); stack.pop()
 }
