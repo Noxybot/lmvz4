@@ -38,7 +38,7 @@ Page {
                 text: qsTr("Конец текущих прокатов")
                 Layout.alignment: Qt.AlignVCenter
                 font.bold: true
-                font.pointSize: 25
+                font.pointSize: 22
             }
         }
     }
@@ -52,12 +52,28 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.fillHeight: true
         }
-        Label {
-            id: label
-            font.pointSize: 25
-            text: qsTr("ул. Сумская, 37")
-            Layout.fillWidth: false
+
+        RowLayout {
+            id: rowLayout1
+            width: 100
+            height: 100
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Layout.fillWidth: true
+
+            Label {
+                font.pointSize: 25
+
+                id: label3
+                text: qsTr("Адрес: ")
+            }
+
+            Label {
+                id: label
+                font.pointSize: 25
+                text: qsTr("ул. Сумская, 37")
+                Layout.fillWidth: false
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            }
         }
 
         RowLayout {
@@ -71,6 +87,14 @@ Page {
                 id: label1
                 text: qsTr("До конца проката осталось: ")
             }
+        }
+
+        RowLayout {
+            id: rowLayout2
+            width: 100
+            height: 100
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Layout.fillWidth: true
 
             Label {
                 font.pointSize: 25
