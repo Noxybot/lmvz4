@@ -15,7 +15,7 @@ Page {
     Text {
         id: signupText
         text: qsTr("Регистрация")
-        font.pointSize: 24
+        font.pointSize: 34
         anchors.top: parent.top
         anchors.topMargin: 30
         anchors.horizontalCenter: parent.horizontalCenter
@@ -30,11 +30,11 @@ Page {
 
         TextField {
             id: registerUsername
-            placeholderText: qsTr("Имя пользователя")
+            placeholderText: qsTr("  Имя пользователя")
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
-            font.pointSize: 14
+            font.pointSize: 34
             font.family: "fontawesome"
             leftPadding: 30
             background: Rectangle {
@@ -45,7 +45,7 @@ Page {
 
                 Text {
                     text: "\uf007"
-                    font.pointSize: 14
+                    font.pointSize: 34
                     font.family: "fontawesome"
                     color: mainAppColor
                     anchors.left: parent.left
@@ -65,11 +65,11 @@ Page {
 
         TextField {
             id: registerPassword
-            placeholderText: qsTr("Пароль")
+            placeholderText: qsTr("  Пароль")
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
-            font.pointSize: 14
+            font.pointSize: 34
             font.family: "fontawesome"
             leftPadding: 30
             echoMode: TextField.PasswordEchoOnEdit
@@ -80,7 +80,7 @@ Page {
                 color: "transparent"
                 Text {
                     text: "\uf023"
-                    font.pointSize: 14
+                    font.pointSize: 34
                     font.family: "fontawesome"
                     color: mainAppColor
                     anchors.left: parent.left
@@ -100,11 +100,11 @@ Page {
 
         TextField {
             id: registerPassword2
-            placeholderText: qsTr("Подвердите пароль")
+            placeholderText: qsTr("  Подвердите пароль")
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
-            font.pointSize: 14
+            font.pointSize: 34
             font.family: "fontawesome"
             leftPadding: 30
             echoMode: TextField.PasswordEchoOnEdit
@@ -115,7 +115,7 @@ Page {
                 color: "transparent"
                 Text {
                     text: "\uf023"
-                    font.pointSize: 14
+                    font.pointSize: 34
                     font.family: "fontawesome"
                     color: mainAppColor
                     anchors.left: parent.left
@@ -135,11 +135,11 @@ Page {
 
         TextField {
             id: passwordHint
-            placeholderText: qsTr("Подсказка к паролю")
+            placeholderText: qsTr("  Подсказка к паролю")
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
-            font.pointSize: 14
+            font.pointSize: 34
             font.family: "fontawesome"
             leftPadding: 30
             background: Rectangle {
@@ -149,7 +149,7 @@ Page {
                 color: "transparent"
                 Text {
                     text: "\uf05a"
-                    font.pointSize: 13
+                    font.pointSize: 34
                     font.bold: true
                     font.family: "fontawesome"
                     color: mainAppColor

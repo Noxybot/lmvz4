@@ -23,7 +23,7 @@ Page {
                 id: control
                 font.family: "fontawesome"
                 text: qsTr("\uf060")
-                font.pointSize: 24
+                font.pointSize: 112
                 rightPadding: 10
                 contentItem: Text {
                     text: control.text
@@ -43,7 +43,7 @@ Page {
     Text {
         id: resetText
         text: qsTr("Восстановление пароля")
-        font.pointSize: 24
+        font.pointSize: 34
         anchors.top: parent.top
         anchors.topMargin: 30
         anchors.horizontalCenter: parent.horizontalCenter
@@ -58,7 +58,7 @@ Page {
 
         TextField {
             id: registeredUsername
-            placeholderText: qsTr("Имя пользователя")
+            placeholderText: qsTr("  Имя пользователя")
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
@@ -73,7 +73,7 @@ Page {
 
                 Text {
                     text: "\uf007"
-                    font.pointSize: 14
+                    font.pointSize: 34
                     font.family: "fontawesome"
                     color: mainAppColor
                     anchors.left: parent.left
@@ -93,7 +93,7 @@ Page {
 
         TextField {
             id: registeredHint
-            placeholderText: qsTr("Подсказка к паролю")
+            placeholderText: qsTr("  Подсказка к паролю")
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
@@ -108,7 +108,7 @@ Page {
                 color: "transparent"
                 Text {
                     text: "\uf023"
-                    font.pointSize: 14
+                    font.pointSize: 34
                     font.family: "fontawesome"
                     color: mainAppColor
                     anchors.left: parent.left

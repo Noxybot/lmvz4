@@ -36,7 +36,7 @@ Page {
 
         TextField {
             id: loginUsername
-            placeholderText: qsTr("Имя пользователя")
+            placeholderText: qsTr(" Имя пользователя")
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
@@ -71,7 +71,7 @@ Page {
 
         TextField {
             id: loginPassword
-            placeholderText: qsTr("Пароль")
+            placeholderText: qsTr(" Пароль")
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor

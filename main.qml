@@ -5,8 +5,8 @@ ApplicationWindow {
   //  property alias login: logpage.cur_pass
     id: rootWindow
     visible: true
-    width: 700
-    height: 680
+    width: 1080
+    height: 2340
     title: qsTr("Login Demo")
 //CabinetForm {}
   // LoginPasswordForm {}

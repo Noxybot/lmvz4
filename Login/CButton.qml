@@ -4,7 +4,7 @@ import QtQuick.Controls 2.0
 Button {
     id: control
     text: qsTr("Войти")
-    font.pointSize: 16
+    font.pointSize: 34
 
     property alias name: control.text
     property color baseColor
