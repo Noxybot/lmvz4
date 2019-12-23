@@ -38,7 +38,7 @@ Page {
                 text: qsTr("Конец текущих прокатов")
                 Layout.alignment: Qt.AlignVCenter
                 font.bold: true
-                font.pointSize: 34
+                font.pointSize: 28
             }
         }
     }

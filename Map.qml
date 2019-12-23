@@ -84,17 +84,17 @@ Page {
             id: markers
 
             ListElement {
-                title: "сумская, 37"
+                title: "Сумская, 37"
                 loc1: 50.003303
                 loc2: 36.233829
             }
             ListElement {
-                 title: "пушкинская, 25"
+                 title: "Пушкинская, 25"
                 loc1: 49.996639
                 loc2: 36.237436
             }
             ListElement {
-                 title: "московский проспект, 15"
+                 title: "Московский проспект, 15"
                 loc1: 49.989413
                 loc2: 36.236462
             }
@@ -168,9 +168,9 @@ Page {
                 Layout.fillWidth: true
                 Item {
                     Layout.maximumHeight: parent.height
-                    Layout.maximumWidth: parent.width / 5
+                    Layout.maximumWidth: parent.width / 4.5
                     Layout.preferredHeight: parent.height
-                   Layout.preferredWidth: parent.width / 5
+                   Layout.preferredWidth: parent.width / 4.5
             Image {
                 anchors.fill: parent
                  visible: zabron.visible
@@ -182,6 +182,7 @@ Page {
                 Item {Layout.fillWidth: true}
 
             Text {
+                Layout.alignment: Qt.AlignLeft
                 font.pointSize: 30
                 visible: parent.visible
                 id: element1
@@ -196,9 +197,9 @@ Page {
                 Layout.fillWidth: true
                 Item {
                     Layout.maximumHeight: parent.height
-                    Layout.maximumWidth: parent.width / 5
+                    Layout.maximumWidth: parent.width / 4.5
                     Layout.preferredHeight: parent.height
-                   Layout.preferredWidth: parent.width / 5
+                   Layout.preferredWidth: parent.width / 4.5
             Image {
                 anchors.fill: parent
                 visible: zabron.visible

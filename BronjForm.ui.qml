@@ -45,7 +45,7 @@ Page {
                     color: "#ffffff"
                     text: qsTr("Бронирование")
                     font.bold: true
-                    font.pixelSize: 27
+                    font.pointSize: 34
                 }
                 Item {
                     Layout.maximumHeight: parent.height
@@ -71,6 +71,7 @@ Page {
     ColumnLayout {
         id: columnLayout
         anchors.fill: parent
+        Layout.fillWidth: true
 
         Text {
             id: element
@@ -79,7 +80,7 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             anchors.horizontalCenter: parent.horizontalCenter
             font.bold: true
-            font.pixelSize: 19
+            font.pointSize: 25
         }
 
         RowLayout {
@@ -87,11 +88,13 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
+                font.pointSize: 25
                 id: label
                 text: qsTr("Забронировать на:")
             }
 
             Label {
+                font.pointSize: 25
                 id: street
                 text: qsTr("ул. Сумская, 37")
             }
@@ -99,9 +102,17 @@ Page {
 
         RowLayout {
             id: rowLayout1
+            Layout.fillWidth: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
+            Label {
+                id: label2
+                font.pointSize: 25
+                text: qsTr("Тариф")
+            }
+
             ComboBox {
+                width: parent.width
                 id: tarif
 
                 currentIndex: 0
@@ -119,12 +130,6 @@ Page {
                 }
             }
 
-            Label {
-                id: label2
-                width: 277
-                height: 17
-                text: qsTr("Тариф")
-            }
 
         }
 
@@ -135,6 +140,7 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
+                font.pointSize: 25
                 id: label3
                 text: qsTr("На")
             }
@@ -146,6 +152,7 @@ Page {
             }
 
             Label {
+                font.pointSize: 25
                 id: label4
                 text: qsTr("часа")
             }
@@ -160,6 +167,7 @@ Page {
 
 
             Label {
+                font.pointSize: 25
                 id: label5
                 text: qsTr("Количество")
             }
@@ -170,6 +178,7 @@ Page {
 
 
             Label {
+                font.pointSize: 25
                 id: label7
                 text: qsTr("штук")
             }
@@ -180,6 +189,12 @@ Page {
             width: 100
             height: 100
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+
+            Label {
+                font.pointSize: 25
+                id: label6
+                text: qsTr("Категория")
+            }
 
             ComboBox {
                 id: type
@@ -200,10 +215,6 @@ Page {
                 }
             }
 
-            Label {
-                id: label6
-                text: qsTr("Категория")
-            }
 
         }
 
@@ -211,7 +222,8 @@ Page {
             id: button
             text: qsTr("Далее")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-            font.pixelSize: 64
+            font.pointSize: 34
+
 
         }
 

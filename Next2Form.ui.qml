@@ -1,6 +1,8 @@
 import QtQuick 2.4
 import QtQuick.Controls 2.3
 import QtQuick.Layouts 1.3
+import QtQuick 2.4
+import QtQuick.Controls 2.3
 
 Page {
     anchors.fill: parent
@@ -51,6 +53,7 @@ Page {
         id: columnLayout
         anchors.fill: parent
 
+
         Text {
             id: element3
             color: "#0b28dc"
@@ -75,17 +78,15 @@ Page {
         }
 
         Item {
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.maximumHeight: parent.height / 3
             Layout.maximumWidth: parent.width - 20
             Layout.preferredHeight: parent.height
             Layout.preferredWidth: parent.width
-
             Image {
-                anchors.fill: parent
                 id: image
-                source: "28062017092831.9.jpg"
+                anchors.fill: parent
                 fillMode: Image.PreserveAspectFit
+                source: "28062017092831.9.jpg"
             }
         }
 
