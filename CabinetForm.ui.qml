@@ -98,7 +98,7 @@ Page {
                 font.pointSize: 25
                 // font.pixelSize: 74
                 id: label4
-                text: qsTr("Сохраненная карта: ")
+                text: qsTr("Сохр. карта: ")
             }
 
             Label {
