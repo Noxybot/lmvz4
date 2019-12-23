@@ -135,6 +135,12 @@ Page {
                 id: time
                 text: qsTr("3 часа")
             }
+
+            Label {
+                font.pointSize: 25
+                id: label
+                text: qsTr(" часа")
+            }
         }
 
         RowLayout {
@@ -194,6 +200,7 @@ Page {
 
         RowLayout {
             id: rowLayout5
+            Layout.fillWidth: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
@@ -201,9 +208,22 @@ Page {
                 id: label10
                 text: qsTr("Выберите способ оплаты")
             }
+        }
 
+        RowLayout {
+            id: row
+            width: 200
+            height: 400
+            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Item {
+                width: 100
+            }
             ComboBox {
+                font.pointSize: 25
                 width: 200
+                //  Layout.fillHeight: true
+                Layout.fillWidth: true
                 id: comboBox
                 currentIndex: 0
                 model: ListModel {
@@ -215,6 +235,9 @@ Page {
                         text: "Наличными"
                     }
                 }
+            }
+            Item {
+                width: 100
             }
         }
 

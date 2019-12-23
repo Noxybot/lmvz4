@@ -112,7 +112,7 @@ Page {
             }
 
             ComboBox {
-                font.pointSize: 22
+                font.pointSize: 25
                 //                delegate: ItemDelegate {
                 //                       //width: control.width
                 //                       text: modelData
@@ -121,8 +121,8 @@ Page {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 //Layout.fillWidth: true
                 // Layout.preferredWidth: parent.width
-                Layout.preferredHeight: 80
-                height: 48
+                // Layout.preferredHeight: 80
+                // height: 48
                 id: tarif
                 Layout.fillWidth: true
 
@@ -160,7 +160,7 @@ Page {
             }
 
             SpinBox {
-                font.pointSize: 22
+                font.pointSize: 25
                 Layout.preferredWidth: 200
                 Layout.preferredHeight: 80
                 id: hours
@@ -193,7 +193,7 @@ Page {
             }
 
             SpinBox {
-                font.pointSize: 22
+                font.pointSize: 25
                 Layout.preferredWidth: 200
                 Layout.preferredHeight: 80
                 id: amount
@@ -226,9 +226,9 @@ Page {
             }
 
             ComboBox {
-                font.pointSize: 22
-                Layout.preferredWidth: 200
-                Layout.preferredHeight: 80
+                font.pointSize: 25
+                // Layout.preferredWidth: 200
+                // Layout.preferredHeight: 80
                 height: 48
                 id: type
                 width: 175
