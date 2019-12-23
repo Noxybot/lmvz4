@@ -15,58 +15,57 @@ Page {
     property alias image1: image1
     property alias street: street
 
-        header: ToolBar {
-            Layout.topMargin: 0
-            Layout.fillWidth: true
-            height: parent.height / 9.9
+    header: ToolBar {
+        Layout.topMargin: 0
+        Layout.fillWidth: true
+        height: parent.height / 9.9
 
+        RowLayout {
+            anchors.fill: parent
+            Item {
+                Layout.maximumHeight: parent.height
+                Layout.maximumWidth: parent.width / 5
+                Layout.preferredHeight: parent.height
+                Layout.preferredWidth: parent.width / 5
+                Image {
+                    anchors.fill: parent
+                    id: image1
+                    source: "ic_keyboard_backspace_black_48dp.png"
+                    fillMode: Image.PreserveAspectFit
 
-            RowLayout {
-                anchors.fill: parent
-                Item {
-                    Layout.maximumHeight: parent.height
-                    Layout.maximumWidth: parent.width / 5
-                    Layout.preferredHeight: parent.height
-                    Layout.preferredWidth: parent.width / 5
-                    Image {
+                    MouseArea {
+                        id: mouseArea1
                         anchors.fill: parent
-                        id: image1
-                        source: "ic_keyboard_backspace_black_48dp.png"
-                        fillMode: Image.PreserveAspectFit
-
-                        MouseArea {
-                            id: mouseArea1
-                            anchors.fill: parent
-                        }
                     }
                 }
-                Text {
-                    id: element7
-                    color: "#ffffff"
-                    text: qsTr("Бронирование")
-                    font.bold: true
-                    font.pointSize: 34
-                }
-                Item {
-                    Layout.maximumHeight: parent.height
-                    Layout.maximumWidth: parent.width / 5
-                    Layout.preferredHeight: parent.height
-                    Layout.preferredWidth: parent.width / 5
+            }
+            Text {
+                id: element7
+                color: "#ffffff"
+                text: qsTr("Бронирование")
+                font.bold: true
+                font.pointSize: 34
+            }
+            Item {
+                Layout.maximumHeight: parent.height
+                Layout.maximumWidth: parent.width / 5
+                Layout.preferredHeight: parent.height
+                Layout.preferredWidth: parent.width / 5
 
-                    Image {
+                Image {
+                    anchors.fill: parent
+                    id: image2
+                    antialiasing: true
+                    fillMode: Image.PreserveAspectFit
+                    source: "help.png"
+                    MouseArea {
+                        id: mouseArea
                         anchors.fill: parent
-                        id: image2
-                        antialiasing: true
-                        fillMode: Image.PreserveAspectFit
-                        source: "help.png"
-                        MouseArea {
-                            id: mouseArea
-                            anchors.fill: parent
-                        }
                     }
                 }
             }
         }
+    }
 
     ColumnLayout {
         id: columnLayout
@@ -102,7 +101,7 @@ Page {
 
         RowLayout {
             id: rowLayout1
-            Layout.fillWidth: true
+            width: parent.width
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
@@ -112,9 +111,13 @@ Page {
             }
 
             ComboBox {
-                width: parent.width
+                Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+                //Layout.fillWidth: true
+                Layout.preferredWidth: 200
+                Layout.preferredHeight: 80
                 id: tarif
 
+                // Layout.fillHeight: true
                 currentIndex: 0
                 model: ListModel {
                     id: cbItems
@@ -129,8 +132,6 @@ Page {
                     }
                 }
             }
-
-
         }
 
         RowLayout {
@@ -146,25 +147,24 @@ Page {
             }
 
             SpinBox {
+                Layout.preferredWidth: 200
+                Layout.preferredHeight: 80
                 id: hours
                 width: 120
                 height: 33
             }
 
             Label {
+
                 font.pointSize: 25
                 id: label4
                 text: qsTr("часа")
             }
-
-
-
         }
 
         RowLayout {
             id: rowLayout3
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-
 
             Label {
                 font.pointSize: 25
@@ -173,9 +173,10 @@ Page {
             }
 
             SpinBox {
+                Layout.preferredWidth: 200
+                Layout.preferredHeight: 80
                 id: amount
             }
-
 
             Label {
                 font.pointSize: 25
@@ -197,6 +198,8 @@ Page {
             }
 
             ComboBox {
+                Layout.preferredWidth: 200
+                Layout.preferredHeight: 80
                 id: type
                 width: 175
                 height: 48
@@ -214,8 +217,6 @@ Page {
                     }
                 }
             }
-
-
         }
 
         Button {
@@ -223,15 +224,8 @@ Page {
             text: qsTr("Далее")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             font.pointSize: 34
-
-
         }
-
-
     }
-
-
-
 }
 
 /*##^##
