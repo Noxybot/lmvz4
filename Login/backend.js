@@ -31,7 +31,7 @@ function validateUserCredentials(uname, pword)
 function validateRegisterCredentials(uname, pword, pword2, hint)
 {
     var ret
-    if(uname === "" || pword === "" || pword2 === "" || hint === "")
+    if(uname === "" || pword === "" || pword2 === "")
     {
         ret = 1
         return ret

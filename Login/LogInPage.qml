@@ -13,6 +13,33 @@ Page {
         color: backGroundColor
     }
 
+    Popup {
+        background: Rectangle {anchors.fill: parent;color: "white"}
+        y: parent.height / 2 + 70
+        id:pop
+        Label {text: "Тариф часовой: 30 грн час\nШтраф 150 грн за каждый проср. час\nТариф дневной: 300 грн в день\nШтраф 3000 грн за каждый проср. день\nТариф месячный: 1000 грн за месяц\n Штраф 10000$ за каждый проср. месяц"}
+    }
+    header: RowLayout {
+        height: parent.height / 9.9
+        Item {
+            Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+            Layout.maximumHeight: parent.height
+            Layout.maximumWidth: parent.width / 5
+            Layout.preferredHeight: parent.height
+            Layout.preferredWidth: parent.width / 5
+        Image {
+            anchors.fill: parent
+            source: "../ic_help_outline_black_48dp.png"
+            fillMode: Image.PreserveAspectFit
+            MouseArea {
+                 anchors.fill: parent
+                 onClicked: pop.open()
+            }
+
+        }
+        }
+    }
+
     Rectangle {
         id: iconRect
         width: parent.width

@@ -48,5 +48,6 @@
         <file>Login/PasswordResetPage.qml</file>
         <file>Login/RegisterScreen.qml</file>
         <file>Login/UserInfoPage.qml</file>
+        <file>ic_help_outline_black_48dp.png</file>
     </qresource>
 </RCC>

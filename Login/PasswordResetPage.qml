@@ -13,25 +13,8 @@ Page {
         height: parent.height / 9.9
         RowLayout {
             anchors.fill: parent
-            ToolButton {
-                id: control
-                font.family: "fontawesome"
-                text: qsTr("\uf060")
-                font.pointSize: 63
-                rightPadding: 10
-                contentItem: Text {
-                    text: control.text
-                    font: control.font
-                    opacity: enabled ? 1.0 : 0.3
-                    color: "white"
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                    elide: Text.ElideRight
-                }
-                onClicked: logoutSession()
-            }
             Text {
-                Layout.alignment: Qt.AlignHCenter
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 id: resetText
                 text: qsTr("Восстановление пароля")
                 font.pointSize: 34
@@ -133,6 +116,16 @@ Page {
             baseColor: mainAppColor
             borderColor: mainAppColor
             onClicked: initiateRetrieval()
+        }
+        CButton{
+            font.pointSize: 26
+            height: 50
+            Layout.preferredWidth: parent.width - 20
+            Layout.alignment: Qt.AlignHCenter
+            name: "Отмена"
+            baseColor: "transparent"
+            borderColor: mainAppColor
+            onClicked: logoutSession()
         }
 
         Item {

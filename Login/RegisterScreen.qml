@@ -16,7 +16,7 @@ Page {
         RowLayout {
             anchors.fill: parent
             Text {
-                Layout.alignment: Qt.AlignHCenter
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 id: signupText
                 text: qsTr("Регистрация")
                 font.pointSize: 34
@@ -157,6 +157,40 @@ Page {
                 color: "transparent"
                 Text {
                     text: "\uf05a"
+                    font.pointSize: 34
+                    font.bold: true
+                    font.family: "fontawesome"
+                    color: mainAppColor
+                    anchors.left: parent.left
+                    anchors.verticalCenter: parent.verticalCenter
+                    leftPadding: 10
+                }
+
+                Rectangle {
+                    width: parent.width - 10
+                    height: 1
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.bottom: parent.bottom
+                    color: mainAppColor
+                }
+            }
+        }
+        TextField {
+            //id: passwordHint
+            placeholderText: qsTr("  Номер кредитной карточки")
+            Layout.preferredWidth: parent.width - 20
+            Layout.alignment: Qt.AlignHCenter
+            color: mainTextCOlor
+            font.pointSize: 34
+            font.family: "fontawesome"
+            leftPadding: 100
+            background: Rectangle {
+                implicitWidth: 200
+                implicitHeight: 50
+                radius: implicitHeight / 2
+                color: "transparent"
+                Text {
+                    text: "\uf09f92b3"
                     font.pointSize: 34
                     font.bold: true
                     font.family: "fontawesome"
