@@ -190,7 +190,7 @@ Page {
                 radius: implicitHeight / 2
                 color: "transparent"
                 Text {
-                    text: "\uf09f92b3"
+                    text: "\u1f4b3"
                     font.pointSize: 34
                     font.bold: true
                     font.family: "fontawesome"

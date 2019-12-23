@@ -67,7 +67,7 @@ int main(int argc, char **argv)
     QGuiApplication app(argc, argv);
     QFont f = app.font();
     f.setFamily("Monaco");
-    f.setPixelSize(0);
+    f.setPointSize(24);
     app.setFont(f);
    QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 

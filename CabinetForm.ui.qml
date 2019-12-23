@@ -35,12 +35,12 @@ Page {
             }
 
             Label {
-                Layout.alignment: Qt.AlignVCenter
+                Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
                 id: element6
                 color: "#ffffff"
                 text: qsTr("Личный кабинет")
                 font.bold: true
-                font.pixelSize: 30
+                font.pointSize: 34
             }
         }
     }
@@ -55,11 +55,13 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
+                font.pointSize: 25
                 id: label1
                 text: qsTr("Пароль: ")
             }
 
             Label {
+                font.pointSize: 25
                 id: password
                 color: "#0b28dc"
                 text: qsTr("password")
@@ -71,12 +73,14 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
+                font.pointSize: 25
                 // font.pixelSize: 74
                 id: label
                 text: qsTr("Логин: ")
             }
 
             Label {
+                font.pointSize: 25
                 //  font.pixelSize: 74
                 id: login
                 color: "#0b28dc"
@@ -91,16 +95,18 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
+                font.pointSize: 25
                 // font.pixelSize: 74
                 id: label4
                 text: qsTr("Сохраненная карта: ")
             }
 
             Label {
+                font.pointSize: 25
                 // font.pixelSize:
                 id: label5
                 color: "#0b28dc"
-                text: qsTr("0000000000000000")
+                text: qsTr("88005553535")
             }
         }
 
@@ -111,11 +117,13 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
+                font.pointSize: 25
                 id: label6
                 text: qsTr("Текущий заказ: ")
             }
 
             Label {
+                font.pointSize: 25
                 id: street
                 text: qsTr("ул. Сумская, 37")
             }
