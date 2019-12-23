@@ -13,12 +13,7 @@ Page {
         color: backGroundColor
     }
 
-    Popup {
-        background: Rectangle {anchors.fill: parent;color: "white"}
-        y: parent.height / 2 + 70
-        id:pop
-        Label {text: "Тариф часовой: 30 грн час\nШтраф 150 грн за каждый проср. час\nТариф дневной: 300 грн в день\nШтраф 3000 грн за каждый проср. день\nТариф месячный: 1000 грн за месяц\n Штраф 10000$ за каждый проср. месяц"}
-    }
+
     header: RowLayout {
         height: parent.height / 9.9
         Item {
@@ -28,6 +23,7 @@ Page {
             Layout.preferredHeight: parent.height
             Layout.preferredWidth: parent.width / 5
         Image {
+            opacity: 0.7
             anchors.fill: parent
             source: "../ic_help_outline_black_48dp.png"
             fillMode: Image.PreserveAspectFit
@@ -60,6 +56,7 @@ Page {
         width: parent.width
         anchors.top: iconRect.bottom
         spacing: 15
+
 
         TextField {
             id: loginUsername
@@ -166,6 +163,13 @@ Page {
             color: mainTextCOlor
             Layout.margins: 10
             onLinkActivated: forgotPassword()
+        }
+        Popup {
+            background: Rectangle {anchors.fill: parent;color: "white"}
+            y: parent.height / 2 + 70
+            id:pop
+            Layout.fillWidth: true
+            Label {text: "Как пользоваться приложением?\nДля начала следует зарегистрироваться.\nЕсли вы желаете совершать оплату в приложении, укажите номер карты при регистрации,\nэто избавит вас от необходимости оставлять залог в пункте проката\nПосле входа или регистрации вы попадете на главную страницу\nВы можете открыть личный кабинет по нажатию на иконку человека\nВ личном кабинете содержится информация, введенная Вами при регистрации\nТакже можно посмотреть код, для брони велосипеда по открытому заказу\nПо нажатию на  \"Конец прокат\" вы сможете посмотреть, когда вам нужно вернуть велосипед, и по какому адресу находится прокат\nДля начала бронирования следует нажать \"Искать прокат\"\nНа карте выберите удобный по расположению прокат, можно воспользоваться фильтром\nПосле нажатия на прокат и  кнопку \"Забронировать\" вы сможете указать нужные параметры брони и оформить заказ"}
         }
     }
 }

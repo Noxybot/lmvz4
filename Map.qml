@@ -35,7 +35,7 @@ Page {
             color: "#ffffff"
             text: qsTr("Выберите прокат")
             font.bold: true
-            font.pixelSize: 27
+            font.pointSize: 34
         }
         Item {
             Layout.alignment: Qt.AlignRight

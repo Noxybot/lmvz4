@@ -11,7 +11,6 @@ Page {
         Layout.fillWidth: true
         height: parent.height / 9.9
 
-
         RowLayout {
             anchors.fill: parent
             Item {
@@ -31,7 +30,6 @@ Page {
                         id: mouseArea
                         anchors.fill: parent
                     }
-
                 }
             }
             Label {
@@ -40,17 +38,10 @@ Page {
                 text: qsTr("Конец текущих прокатов")
                 Layout.alignment: Qt.AlignVCenter
                 font.bold: true
-                font.pointSize: 30
-
+                font.pointSize: 34
             }
-
-
         }
-
-
     }
-
-
 
     ColumnLayout {
         id: columnLayout
@@ -72,7 +63,7 @@ Page {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
-               font.pointSize: 30
+                font.pointSize: 30
                 id: label1
                 text: qsTr("До конца проката осталось: ")
             }
@@ -83,10 +74,6 @@ Page {
                 color: "#0b28dc"
                 text: qsTr("3 часа 0 минут 0 секунд")
             }
-
-
-
-
         }
 
         Item {
@@ -100,3 +87,4 @@ Designer {
     D{i:0;autoSize:true;height:480;width:640}D{i:7;anchors_height:100;anchors_width:100}
 }
 ##^##*/
+

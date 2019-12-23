@@ -22,7 +22,7 @@ Page {
                 color: "#ffffff"
                 text: qsTr("Бронирование")
                 font.bold: true
-                font.pixelSize: 27
+                font.pointSize: 34
             }
             Item {
                 Layout.alignment: Qt.AlignRight
