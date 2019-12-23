@@ -11,16 +11,24 @@ Page {
     background: Rectangle {
         color: backGroundColor
     }
-
-    Text {
-        id: signupText
-        text: qsTr("Регистрация")
-        font.pointSize: 34
-        anchors.top: parent.top
-        anchors.topMargin: 30
-        anchors.horizontalCenter: parent.horizontalCenter
-        color: mainTextCOlor
+    header: ToolBar {
+        height: parent.height / 9.9
+        RowLayout {
+            anchors.fill: parent
+            Text {
+                Layout.alignment: Qt.AlignHCenter
+                id: signupText
+                text: qsTr("Регистрация")
+                font.pointSize: 34
+                anchors.top: parent.top
+                anchors.topMargin: 30
+                anchors.horizontalCenter: parent.horizontalCenter
+                color: "White"
+            }
+        }
     }
+
+
 
     ColumnLayout {
         width: parent.width
@@ -36,7 +44,7 @@ Page {
             color: mainTextCOlor
             font.pointSize: 34
             font.family: "fontawesome"
-            leftPadding: 30
+            leftPadding: 100
             background: Rectangle {
                 implicitWidth: 200
                 implicitHeight: 50
@@ -71,7 +79,7 @@ Page {
             color: mainTextCOlor
             font.pointSize: 34
             font.family: "fontawesome"
-            leftPadding: 30
+            leftPadding: 100
             echoMode: TextField.PasswordEchoOnEdit
             background: Rectangle {
                 implicitWidth: 200
@@ -106,7 +114,7 @@ Page {
             color: mainTextCOlor
             font.pointSize: 34
             font.family: "fontawesome"
-            leftPadding: 30
+            leftPadding: 100
             echoMode: TextField.PasswordEchoOnEdit
             background: Rectangle {
                 implicitWidth: 200
@@ -141,7 +149,7 @@ Page {
             color: mainTextCOlor
             font.pointSize: 34
             font.family: "fontawesome"
-            leftPadding: 30
+            leftPadding: 100
             background: Rectangle {
                 implicitWidth: 200
                 implicitHeight: 50
@@ -173,6 +181,7 @@ Page {
         }
 
         CButton{
+            font.pointSize: 26
             height: 50
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
@@ -183,6 +192,7 @@ Page {
         }
 
         CButton{
+            font.pointSize: 26
             height: 50
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter

@@ -9,45 +9,39 @@ Page {
         color: backGroundColor
     }
 
-    footer: ToolBar {
-        background:
-            Rectangle {
-            implicitHeight: 50
-            implicitWidth: 200
-            color: "transparent"
-        }
-
+    header: ToolBar {
+        height: parent.height / 9.9
         RowLayout {
             anchors.fill: parent
             ToolButton {
                 id: control
                 font.family: "fontawesome"
                 text: qsTr("\uf060")
-                font.pointSize: 112
+                font.pointSize: 63
                 rightPadding: 10
                 contentItem: Text {
                     text: control.text
                     font: control.font
                     opacity: enabled ? 1.0 : 0.3
-                    color: mainTextCOlor
+                    color: "white"
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     elide: Text.ElideRight
                 }
                 onClicked: logoutSession()
             }
-            Item { Layout.fillWidth: true }
+            Text {
+                Layout.alignment: Qt.AlignHCenter
+                id: resetText
+                text: qsTr("Восстановление пароля")
+                font.pointSize: 34
+                anchors.top: parent.top
+                anchors.topMargin: 30
+                anchors.horizontalCenter: parent.horizontalCenter
+                color: "white"
+            }
+           // Item { Layout.fillWidth: true }
         }
-    }
-
-    Text {
-        id: resetText
-        text: qsTr("Восстановление пароля")
-        font.pointSize: 34
-        anchors.top: parent.top
-        anchors.topMargin: 30
-        anchors.horizontalCenter: parent.horizontalCenter
-        color: mainTextCOlor
     }
 
     ColumnLayout {
@@ -64,7 +58,7 @@ Page {
             color: mainTextCOlor
             font.pointSize: 34
             font.family: "fontawesome"
-            leftPadding: 30
+            leftPadding: 100
             background: Rectangle {
                 implicitWidth: 200
                 implicitHeight: 50
@@ -99,7 +93,7 @@ Page {
             color: mainTextCOlor
             font.pointSize: 34
             font.family: "fontawesome"
-            leftPadding: 30
+            leftPadding: 100
             echoMode: TextField.PasswordEchoOnEdit
             background: Rectangle {
                 implicitWidth: 200
@@ -131,6 +125,7 @@ Page {
         }
 
         CButton{
+            font.pointSize: 26
             height: 50
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
