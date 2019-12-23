@@ -100,8 +100,9 @@ Page {
         }
 
         RowLayout {
+            Layout.fillHeight: false
             id: rowLayout1
-            width: parent.width
+            Layout.fillWidth: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
@@ -111,11 +112,19 @@ Page {
             }
 
             ComboBox {
-                Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+                font.pointSize: 22
+                //                delegate: ItemDelegate {
+                //                       //width: control.width
+                //                       text: modelData
+                //                       font.pointSize: 25
+                //                   }
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 //Layout.fillWidth: true
-                Layout.preferredWidth: 200
+                // Layout.preferredWidth: parent.width
                 Layout.preferredHeight: 80
+                height: 48
                 id: tarif
+                Layout.fillWidth: true
 
                 // Layout.fillHeight: true
                 currentIndex: 0
@@ -132,12 +141,16 @@ Page {
                     }
                 }
             }
+            Item {
+                width: 20
+            }
         }
 
         RowLayout {
             id: rowLayout2
             width: 100
             height: 100
+            Layout.fillWidth: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
@@ -147,11 +160,14 @@ Page {
             }
 
             SpinBox {
+                font.pointSize: 22
                 Layout.preferredWidth: 200
                 Layout.preferredHeight: 80
                 id: hours
                 width: 120
                 height: 33
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                Layout.fillWidth: true
             }
 
             Label {
@@ -160,10 +176,14 @@ Page {
                 id: label4
                 text: qsTr("часа")
             }
+            Item {
+                width: 20
+            }
         }
 
         RowLayout {
             id: rowLayout3
+            Layout.fillWidth: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
@@ -173,9 +193,12 @@ Page {
             }
 
             SpinBox {
+                font.pointSize: 22
                 Layout.preferredWidth: 200
                 Layout.preferredHeight: 80
                 id: amount
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                Layout.fillWidth: true
             }
 
             Label {
@@ -183,12 +206,17 @@ Page {
                 id: label7
                 text: qsTr("штук")
             }
+
+            Item {
+                width: 20
+            }
         }
 
         RowLayout {
             id: rowLayout4
             width: 100
             height: 100
+            Layout.fillWidth: true
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Label {
@@ -198,11 +226,15 @@ Page {
             }
 
             ComboBox {
+                font.pointSize: 22
                 Layout.preferredWidth: 200
                 Layout.preferredHeight: 80
+                height: 48
                 id: type
                 width: 175
-                height: 48
+
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                Layout.fillWidth: true
                 currentIndex: 0
                 model: ListModel {
                     id: cbItems2
@@ -216,6 +248,9 @@ Page {
                         text: "Детский"
                     }
                 }
+            }
+            Item {
+                width: 20
             }
         }
 
