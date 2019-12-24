@@ -220,10 +220,17 @@ Page {
                 width: 100
             }
             ComboBox {
+                delegate: ItemDelegate {
+                    //width: control.width
+                    text: modelData
+                    font.pointSize: 25
+                }
                 font.pointSize: 25
                 width: 200
                 //  Layout.fillHeight: true
                 Layout.fillWidth: true
+                Layout.preferredHeight: 80
+                height: 80
                 id: comboBox
                 currentIndex: 0
                 model: ListModel {

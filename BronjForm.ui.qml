@@ -112,12 +112,14 @@ Page {
             }
 
             ComboBox {
+                Layout.preferredHeight: 80
+                height: 80
                 font.pointSize: 25
-                //                delegate: ItemDelegate {
-                //                       //width: control.width
-                //                       text: modelData
-                //                       font.pointSize: 25
-                //                   }
+                delegate: ItemDelegate {
+                    //width: control.width
+                    text: modelData
+                    font.pointSize: 25
+                }
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 //Layout.fillWidth: true
                 // Layout.preferredWidth: parent.width
@@ -226,10 +228,15 @@ Page {
             }
 
             ComboBox {
+                delegate: ItemDelegate {
+                    //width: control.width
+                    text: modelData
+                    font.pointSize: 25
+                }
                 font.pointSize: 25
                 // Layout.preferredWidth: 200
-                // Layout.preferredHeight: 80
-                height: 48
+                Layout.preferredHeight: 80
+                height: 80
                 id: type
                 width: 175
 
