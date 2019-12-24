@@ -13,7 +13,11 @@ BronjForm {
 }
     button.onClicked: {stack.push("Next.qml", {"street.text": street.text  , "tarif.text":tarif.currentText ,
                                       "time.text": hours.value.toString(), "type.text": type.currentText,
-                                      "amount.text": amount.value.toString(), "totalsum.text": tarif.currentIndex == 0 ? 30 : (tarif.currentIndex == 1) ? 300 : 1000})
+                                      "amount.text": amount.value.toString(), "totalsum.text": tarif.currentIndex == 0 ? 30 : (tarif.currentIndex == 1) ? 300 : 1000,
+                                       "days_month.text": tarif.currentIndex == 0 ? qsTr("час(а)") : tarif.currentIndex == 1 ? "день(дней)" : "месяц(ев)"
+
+
+                                  })
 }
     mouseArea1.onClicked: {stack.pop()
     }

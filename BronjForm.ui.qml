@@ -176,7 +176,7 @@ Page {
 
                 font.pointSize: 25
                 id: label4
-                text: qsTr("часа")
+                text: tarif.currentIndex == 0 ? qsTr("часа") : tarif.currentIndex == 1 ? "дней" : "месяцев"
             }
             Item {
                 width: 20

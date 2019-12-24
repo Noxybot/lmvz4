@@ -12,6 +12,7 @@ Page {
     property alias tarif: tarif
     property alias street: street
     property alias gonext: gonext
+    property alias days_month: days_month
 
     header: ToolBar {
         Layout.topMargin: 0
@@ -138,7 +139,7 @@ Page {
 
             Label {
                 font.pointSize: 25
-                id: label
+                id: days_month
                 text: qsTr(" часа")
             }
         }
