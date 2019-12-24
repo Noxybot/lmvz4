@@ -38,7 +38,7 @@ Page {
 
         TextField {
             id: registerUsername
-            placeholderText: qsTr("  Имя пользователя")
+            placeholderText: qsTr("  Имя пользователя*")
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
@@ -73,7 +73,7 @@ Page {
 
         TextField {
             id: registerPassword
-            placeholderText: qsTr("  Пароль")
+            placeholderText: qsTr("  Пароль*")
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
@@ -108,7 +108,7 @@ Page {
 
         TextField {
             id: registerPassword2
-            placeholderText: qsTr("  Подвердите пароль")
+            placeholderText: qsTr("  Подвердите пароль*")
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
@@ -143,7 +143,7 @@ Page {
 
         TextField {
             id: passwordHint
-            placeholderText: qsTr("  Подсказка к паролю")
+            placeholderText: qsTr("  Подсказка к паролю*")
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor
@@ -177,7 +177,7 @@ Page {
         }
         TextField {
             //id: passwordHint
-            placeholderText: qsTr("  Номер кредитной карточки")
+            placeholderText: qsTr("  Номер кред. карты")
             Layout.preferredWidth: parent.width - 20
             Layout.alignment: Qt.AlignHCenter
             color: mainTextCOlor

@@ -37,17 +37,15 @@ Page {
                 color: "#ffffff"
                 text: qsTr("Выберите фильтры")
                 font.bold: true
-                font.pixelSize: 34
+                font.pointSize: 34
             }
         }
     }
-
 
     ColumnLayout {
         id: columnLayout
         anchors.fill: parent
         Layout.topMargin: 0
-
 
         RowLayout {
             Layout.fillWidth: true
@@ -61,7 +59,15 @@ Page {
             }
 
             ComboBox {
-                width: 200
+                Layout.preferredHeight: 80
+                height: 80
+                Layout.fillWidth: true
+                font.pointSize: 25
+                delegate: ItemDelegate {
+                    //width: control.width
+                    text: modelData
+                    font.pointSize: 25
+                }
                 id: comboBox
                 currentIndex: 0
                 model: ListModel {
@@ -77,6 +83,9 @@ Page {
                     }
                 }
             }
+            Item {
+                width: 20
+            }
         }
 
         RowLayout {
@@ -89,7 +98,15 @@ Page {
             }
 
             ComboBox {
-                width: 200
+                Layout.preferredHeight: 80
+                height: 80
+                Layout.fillWidth: true
+                font.pointSize: 25
+                delegate: ItemDelegate {
+                    //width: control.width
+                    text: modelData
+                    font.pointSize: 25
+                }
                 id: comboBox1
                 currentIndex: 0
                 model: ListModel {
@@ -104,6 +121,9 @@ Page {
                         text: "Детский"
                     }
                 }
+            }
+            Item {
+                width: 20
             }
         }
 

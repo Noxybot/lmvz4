@@ -48,7 +48,7 @@ Page {
 
     Text {
         id: welcometext
-        text: "Welcome, \n" + userName
+        text: "Добро пожаловать, \n" + userName
         anchors.centerIn: parent
         font.pointSize: 22
         color: mainTextCOlor

@@ -194,7 +194,13 @@ Page {
                 font.pointSize: 25
                 id: totalsum
                 color: "#0b28dc"
-                text: qsTr("90 грн.")
+                text: qsTr("90")
+                font.bold: true
+            }
+            Label {
+                font.pointSize: 25
+                color: "#0b28dc"
+                text: qsTr("грн.")
                 font.bold: true
             }
         }

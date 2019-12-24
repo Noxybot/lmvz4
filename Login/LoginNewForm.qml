@@ -91,11 +91,11 @@ Page {
         var message = ""
         switch(ret)
         {
-        case 0: message = "Valid details!"
+        case 0: message = "Регистрация успешна"
             break;
-        case 1: message = "Missing credentials!"
+        case 1: message = "Не все поля заполнены!"
             break;
-        case 2: message = "Неправильный пароль!"
+        case 2: message = "Неправильный повтор пароля!"
             break;
         }
 
