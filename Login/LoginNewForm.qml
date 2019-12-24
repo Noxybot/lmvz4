@@ -116,7 +116,7 @@ Page {
                 return
             }
             tx.executeSql('INSERT INTO UserDetails VALUES(?, ?, ?)', [ uname, pword, hint ]);
-            showUserInfo(uname) // goto user info page
+            showUserInfo(uname, pword) // goto user info page
         })
     }
 
@@ -137,13 +137,13 @@ Page {
             var results = tx.executeSql('SELECT password FROM UserDetails WHERE username=?;', uname);
             if(results.rows.length === 0)
             {
-                message = "User not registered!"
+                message = "Пользователь не зарегистрирован!"
                 popup.popMessage = message
                 popup.open()
             }
             else if(results.rows.item(0).password !== pword)
             {
-                message = "Invalid credentials!"
+                message = "Неправильный логин или пароль!"
                 popup.popMessage = message
                 popup.open()
             }
@@ -151,7 +151,7 @@ Page {
             {
                 cur_login = uname
                 cur_pass = pword
-                console.log("Login Success!")
+                console.log("Авторизация успешна!")
                 showUserInfo(uname, pword)
             }
         })
